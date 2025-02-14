@@ -1,17 +1,13 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-    
+        // Use set to store unique elements
         set<int> s(nums.begin(), nums.end());
-
-
-        int index = 0;
-        for (auto a : s) {
-            nums[index] = a;
-            index++;
-        }
-
         
-        return s.size();
+        // Directly assign set elements back to nums vector
+        nums.assign(s.begin(), s.end());
+        
+        // Return the number of unique elements
+        return nums.size();
     }
 };
