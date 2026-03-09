@@ -13,7 +13,7 @@ public:
             
           }
           else if(nums[j]==0){
-            j=i;
+            i=j;
             count =0;
             i++;
             j++;
